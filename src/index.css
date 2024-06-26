@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+
+.head {
+  @apply border border-gray-300 px-4 py-2;
+}
+
+.lable {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
+.inputX {
+  @apply appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-transparent;
+}
+
+.link {
+  @apply block md:inline-block mt-4 mx-5 md:mt-0 hover:border-y border-gray-950 font-medium px-4 md:px-0;
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
