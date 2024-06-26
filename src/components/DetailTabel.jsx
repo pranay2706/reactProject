@@ -42,13 +42,13 @@ export default function DetailTabel({ data, searchedData, setSearchedData }) {
         {renderedData.map((data) => (
           <div
             key={data.id}
-            className="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:bg-gray-100"
+            className="bg-custom-white rounded-lg shadow-md p-4 cursor-pointer hover:bg-light-gray"
           >
             <div onClick={() => handleClick(data.id)}>
               <h2 className="text-xl font-bold">{data.name}</h2>
-              <p className="text-gray-600">{data.email}</p>
-              <p className="text-gray-600">{data.phone}</p>
-              <p className="text-gray-600">{data.city}</p>
+              <p className="text-custom-black">{data.email}</p>
+              <p className="text-custom-black">{data.phone}</p>
+              <p className="text-custom-black">{data.city}</p>
             </div>
           </div>
         ))}
@@ -74,7 +74,7 @@ export default function DetailTabel({ data, searchedData, setSearchedData }) {
               <tr key={data.id}>
                 <td className="head">{data.id}</td>
                 <td
-                  className="head bg-white cursor-pointer hover:bg-slate-400"
+                  className="head bg-white cursor-pointer hover:bg-light-gray"
                   onClick={() => handleClick(data.id)}
                 >
                   {data.name}
@@ -93,8 +93,12 @@ export default function DetailTabel({ data, searchedData, setSearchedData }) {
   return (
     <>
       {renderedData.length !== 0 ? (
-        <div className="flex">
-          {window.innerWidth < 640 ? renderAsCards() : renderAsTable()}
+        // <div className="flex">
+        //   {window.innerWidth < 640 ? renderAsCards() : renderAsTable()}
+        // </div>
+        <div>
+          <div className="md:hidden">{renderAsCards()}</div>
+          <div className="hidden md:block">{renderAsTable()}</div>
         </div>
       ) : (
         <p className="flex justify-center items-center mt-5">

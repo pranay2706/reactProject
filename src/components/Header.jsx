@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header({ handleAddClick }) {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-10 py-2 text-lg bg-gray-400">
+    <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-10 py-2 text-lg bg-light-gray">
       <div className="flex items-center">
         <img src="./logo.png" alt="logo" className="h-12" />
       </div>
@@ -19,7 +19,7 @@ export default function Header({ handleAddClick }) {
         </Link>
       </div>
       <button
-        className="bg-lime-300 py-2 px-5 mt-4 md:mt-0"
+        className="bg-custom-green py-2 px-5 mt-4 md:mt-0"
         onClick={handleAddClick}
       >
         ADD
